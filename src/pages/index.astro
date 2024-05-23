@@ -8,7 +8,9 @@ import SocialPill from '../components/SocialPill.astro';
 import Gmail from '../components/icons/Gmail.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout 
+title="Portafolio de Santiago García - Desarrollador Web"
+description='Conoce mejor el trabajo que ofrece el desarrollador Front-end Santiago García para tu próximo proyecto de desarrollo web'>
 	<main>
 		<section class="w-full lg:w-[740px] mx-auto py-44">
 
@@ -22,29 +24,31 @@ import Gmail from '../components/icons/Gmail.astro';
 				<a/>
 			</h1>
 			<h2 class="text-2xl leading-9 opacity-90 text-wrap">
-				Programador Junior. <span class="text-orange-500/100">Desarrollador Front end en Constante Aprendizaje</span>
-				<span class="opacity-100">
+				Programador Junior. <br>
+				<span class="font-semibold">Desarrollador Front end en Constante Aprendizaje</span>
 				especializado en Desarrollo de Aplicaciones
 				web con:
+				<span class="font-semibold">
+					<span class="text-blue-500">React</span>
+					<span class="text-red-600/95">Next.js</span> 
+					<span class="opacity-70 font-normal">y</span>
+					<span class="text-purple-600">Astro</span>
 				</span>
-				<span class="text-blue-500">React</span>
-				<span class="text-red-600/95">Next.js</span> 
-				<span class="opacity-80">y</span>
-				<span class="text-purple-600">Astro</span>
+				
 
 			</h2>
 
 		<nav class="flex gap-x-2 mt-10">
 				<SocialPill href="https://www.linkedin.com/in/santiago-garcía-754179256/">
-					<Linkendin class="w-6 h-6"/>
+					<Linkendin class="size-6"/>
 					Linkendin
 				</SocialPill>
 				<SocialPill href="https://github.com/Santiagarmo">
-					<GitHub class="w-6 h-6"/>
+					<GitHub class="size-6"/>
 					GitHub
 				</SocialPill>
 				<SocialPill href="">
-					<Gmail class="w-6 h-6"/>
+					<Gmail class="size-6"/>
 					space270406@gmail.com
 				</SocialPill>
 		</nav>
