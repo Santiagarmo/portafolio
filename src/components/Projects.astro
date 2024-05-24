@@ -1,0 +1,51 @@
+---
+import React from './icons/React.astro'
+import Next from './icons/Next.astro'
+
+const TAGS = {
+    NEXT :{
+    name: 'Next.js',
+    class: 'bg-black text-white',
+    icon: Next,
+    },
+
+    REACT :{
+    name: 'React',
+    class: 'bg-[#003159] text-white',
+    icon: React,
+    },
+}
+
+const PROJECTS = [
+  {
+    title: 'Project IDX - Framework Online by Google',
+    description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus ac purus tincidunt.',
+    link: 'https://idx.dev',
+    github: '#',
+    image: '/public/svgl.jpeg',
+    tags: [ TAGS.REACT, TAGS.NEXT ]
+    }
+]
+---
+
+{
+    PROJECTS.map(({title, description, tags, image}) => (
+        <article>
+            <h3 class="text-2xl font-semibold text-sky-200 mb-2">{title}</h3>
+            <p class="mb-4 text-pretty text-lg">{description}</p>
+            <ul class="flex gap-x-3 flex-row">
+                {tags.map(tag => (
+                    <li>
+                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 m-4`}>
+                        <tag.icon class="size-4"/>
+                        {tag.name}
+                    </span>
+                    </li>
+                ))}
+            </ul>
+            <img 
+            class="rounded-lg shadow-2xl shadow-white/20"
+            src={image} alt={`Captura de pantalla del proyecto ${image}`}/>
+        </article>
+    ))
+}

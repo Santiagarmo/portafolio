@@ -6,15 +6,20 @@ import GitHub from '../components/icons/GitHub.astro';
 import Linkendin from '../components/icons/Linkendin.astro';
 import SocialPill from '../components/SocialPill.astro';
 import Gmail from '../components/icons/Gmail.astro';
+import Case from '../components/icons/Case.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Code from '../components/icons/Code.astro';
+import Projects from '../components/Projects.astro';
 ---
 
 <Layout 
 title="Portafolio de Santiago García - Desarrollador Web"
 description='Conoce mejor el trabajo que ofrece el desarrollador Front-end Santiago García para tu próximo proyecto de desarrollo web'>
-	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44">
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-32" id="sobre-mi top">
 
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">Hey, soy Santiago
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 t">Hey, soy Santiago
 				<a 
 				href="https://github.com/Santiagarmo" 
 				target="_blank"
@@ -23,7 +28,7 @@ description='Conoce mejor el trabajo que ofrece el desarrollador Front-end Santi
 					<Badge>Abierto a ofertas</Badge>
 				<a/>
 			</h1>
-			<h2 class="text-2xl leading-9 opacity-90 text-wrap">
+			<h2 class="text-xl lg:text-2xl leading-9 opacity-90 text-wrap max-w-[700px]">
 				Programador Junior. <br>
 				<span class="font-semibold">Desarrollador Front end en Constante Aprendizaje</span>
 				especializado en Desarrollo de Aplicaciones
@@ -38,20 +43,40 @@ description='Conoce mejor el trabajo que ofrece el desarrollador Front-end Santi
 
 			</h2>
 
-		<nav class="flex gap-x-2 mt-10">
-				<SocialPill href="https://www.linkedin.com/in/santiago-garcía-754179256/">
-					<Linkendin class="size-6"/>
-					Linkendin
+		<nav class="flex gap-4 mt-10 flex-wrap">
+				<SocialPill href="https://www.linkedin.com/in/santiago-garcía-754179256/" target="_blank">
+					<Linkendin class="size-4 md:size-6"/>
+					LinkendIn
 				</SocialPill>
-				<SocialPill href="https://github.com/Santiagarmo">
-					<GitHub class="size-6"/>
+				<SocialPill href="https://github.com/Santiagarmo" target="_blank">
+					<GitHub class="size-4 md:size-6"/>
 					GitHub
 				</SocialPill>
-				<SocialPill href="">
-					<Gmail class="size-6"/>
+				<SocialPill href="mailto:space270406@gmail.com" target="">
+					<Gmail class="size-4 md:size-6"/>
 					space270406@gmail.com
 				</SocialPill>
 		</nav>
-		</section>
+		</SectionContainer>
+
+		<!-- LOGROS Y PROYECTOS -->
+
+		<SectionContainer id="experiencia">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Case class="size-7	"/>
+				Experiencia Laboral
+			</h2>
+			<Experience/>
+		</SectionContainer>
+
+		<!-- PROYECTOS -->
+
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Code class="size-7	"/>
+				Proyectos Destacados
+			</h2>
+			<Projects/>
+		</SectionContainer>
 	</main>
 </Layout>
